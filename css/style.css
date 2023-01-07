@@ -2,6 +2,7 @@
 html {
 
     font-size: 62.5%;
+    background: #F3F5FC;
 
 }
 
@@ -18,9 +19,11 @@ main {
         "section"
         "aside"
         "footer";
+    grid-template-rows: 20% 40% 40% 10%;
 
 }
 
+/*Asignación de display*/
 main > * {
 
     display: flex;
@@ -32,9 +35,32 @@ main > * {
 
 }
 
+
+
+/*Header logo|titulo*/
 header {
 
     grid-area: header;
+    grid-gap: 1rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 2rem;
+    color: #0A3871;
+    border: none;
+
+}
+
+header h1 img {
+
+    margin-bottom: 1rem;
+    box-shadow: -4px 46px 18px -19px rgba(10,56,113,0.79);
+
+}
+
+header h2 {
+
+    box-shadow: none;
+    font-weight: bold;
 
 }
 
@@ -78,6 +104,20 @@ footer {
         grid-template-rows: 10% 80% 10%;      
 
     }
+
+    header {
+
+        flex-direction: row;
+        justify-content: flex-start;
+
+    }
+
+    header h2 {
+
+        margin-bottom: 1rem;
+        box-shadow: -4px 46px 18px -19px rgba(10,56,113,0.79);    
+    
+    }
     
 }
 
@@ -93,6 +133,25 @@ footer {
         grid-template-columns: 20% 50% 30%;
         grid-template-rows: 10% 80% 10%;
 
+    }
+
+    header {
+
+        justify-content: flex-start;
+
+    }
+
+    logo {
+
+        margin-right: 10rem;
+    
+    }
+
+    header h2 {
+
+        margin-bottom: 1rem;
+        box-shadow: -4px 46px 18px -19px rgba(10,56,113,0.79);    
+    
     }
     
 }
