@@ -35,26 +35,6 @@ main > * {
 
 }
 
-/*Header*/
-header {
-
-    grid-area: header;
-    grid-gap: 1rem;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding-left: 2rem;
-    color: #0A3871;
-    border: none;
-
-}
-
-header h1 img {
-
-    margin-bottom: 1rem;
-    box-shadow: -4px 46px 18px -19px rgba(10,56,113,0.79);
-
-}
-
 header h2 {
 
     box-shadow: none;
@@ -81,10 +61,25 @@ footer {
 
 }
 
-/*header*/
+/*Header*/
+header {
 
+    grid-area: header;
+    grid-gap: 1rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 2rem;
+    color: #0A3871;
+    border: none;
 
+}
 
+header h1 img {
+
+    margin-bottom: 1rem;
+    box-shadow: -4px 46px 18px -19px rgba(10,56,113,0.79);
+
+}
 
 /*Main section-left*/
 
@@ -141,6 +136,7 @@ footer {
 
 }
 
+/*Main section-Right*/
 
 /*Pseudo-elementos*/
 /*section-left*/
