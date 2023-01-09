@@ -35,13 +35,7 @@ main > * {
 
 }
 
-<<<<<<< HEAD
-
-
-/*Header logo|titulo*/
-=======
-/*division de contenedores*/
->>>>>>> section
+/*Header*/
 header {
 
     grid-area: header;
