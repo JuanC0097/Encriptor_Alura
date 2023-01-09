@@ -35,9 +35,13 @@ main > * {
 
 }
 
+<<<<<<< HEAD
 
 
 /*Header logo|titulo*/
+=======
+/*division de contenedores*/
+>>>>>>> section
 header {
 
     grid-area: header;
@@ -87,8 +91,84 @@ footer {
 
 
 
+
+/*Main section-left*/
+
+/*space-write*/
+.container-sect-left  {
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 12px 21px 10px -6px rgba(20,101,187,0.65);
+    border: none;
+
+}
+
+.write-space {
+
+    padding: 4rem 2rem;
+    
+
+}
+
+.write-space input{
+
+    font-size: 2.5rem;
+    height: 5rem;
+    border: none;
+    color: #1465bb;
+
+}
+
+/*input-button*/
+
+.buttons p {
+
+    font-size: 1.5rem;
+    color: #1465bb;
+    margin-bottom: 1rem;
+
+}
+
+.buttons input {
+
+    height: 5rem;
+    padding: 1rem 2rem;
+    font-size: 2.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    background: #1465bb;
+    color: #ffffff;
+    
+
+}
+
+
+/*Pseudo-elementos*/
+/*section-left*/
+
+::placeholder {
+
+    color: #609ddf;
+
+}
+
+
 /*Eventos*/
 
+.buttons input:hover {
+
+    transform: scale(1.2);
+    background-color: #ffffff;
+    color: #1465bb;
+    border: #1465bb solid 0.2rem;
+    margin-right: 5rem;
+
+}
 
 /*Media Queries para tablet*/
 
