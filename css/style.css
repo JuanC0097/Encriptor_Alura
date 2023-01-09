@@ -109,6 +109,7 @@ header h1 img {
     height: 5rem;
     border: none;
     color: #1465bb;
+    background-color: #F3F5FC;
 
 }
 
@@ -117,7 +118,7 @@ header h1 img {
 .buttons p {
 
     font-size: 1.5rem;
-    color: #1465bb;
+    color: #808080;
     margin-bottom: 1rem;
 
 }
@@ -137,6 +138,46 @@ header h1 img {
 }
 
 /*Main section-Right*/
+
+.container-sect-right {
+
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    box-shadow: 12px 21px 10px -6px rgba(20,101,187,0.65);
+    border: none;
+
+}
+
+.div-right {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.div-right img {
+
+    width: 70%;
+    height: 16rem;
+
+}
+
+.div-right h3 {
+
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+
+.div-right p {
+
+    font-size: 1rem;
+
+}
+
 
 /*Pseudo-elementos*/
 /*section-left*/
@@ -175,6 +216,7 @@ header h1 img {
 
     }
 
+    /*Header*/
     header {
 
         flex-direction: row;
@@ -186,6 +228,20 @@ header h1 img {
 
         margin-bottom: 1rem;
         box-shadow: -4px 46px 18px -19px rgba(10,56,113,0.79);    
+    
+    }
+
+    /*Section-Right*/
+    .div-right img {
+
+        width: 90%;
+        height: 50%;
+    
+    }
+
+    .div-right h3 {
+
+        margin: 2rem 0;
     
     }
     
@@ -221,6 +277,34 @@ header h1 img {
 
         margin-bottom: 1rem;
         box-shadow: -4px 46px 18px -19px rgba(10,56,113,0.79);    
+    
+    }
+    /*Section-Left*/
+
+    .write-space input {
+
+        height: 8rem;
+
+    }
+
+    ::placeholder {
+
+        color: #609ddf;
+        font-size: 3rem;
+    
+    }
+
+    /*Section-Right*/
+    .div-right img {
+
+        width: 100%;
+        height: 50%;
+    
+    }
+
+    .div-right h3 {
+
+        margin: 2rem 0;
     
     }
     
