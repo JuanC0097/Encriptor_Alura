@@ -178,6 +178,31 @@ header h1 img {
 
 }
 
+/*Footer*/
+footer {
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    border: none;
+    color: #ffffff;
+    font-family: 'Moon Dance', cursive;
+    background-image: url(../assets/background-footer.jpg);
+
+}
+
+footer p  {
+
+    margin-top: 0.5rem;
+
+}
+
+footer a {
+
+    color: #ffffff;
+
+}
+
 
 /*Pseudo-elementos*/
 /*section-left*/
