@@ -2,14 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Encriptador de Texto</title>
+    
     <link rel="stylesheet" href="./css/reset.css">
+    
     <link rel="stylesheet" href="./css/style.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet">
+    
     <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+
+    
+
 </head>
 <body>
     
@@ -23,20 +34,21 @@
 
         <section class="container-sect-left">
 
-            <form action="" class="write-space">
+            <div class="write-space">
 
-                <input type="text" id="encryptor_field" placeholder="    Ingrese el texto" required>
+                <input type="text" id="encryptor_text" placeholder="    Ingrese el texto" required>
 
-            </form>
+                <div class="buttons">
+                        
+                    <p class="warning"><iconify-icon icon="ic:sharp-warning"></iconify-icon> Solo letras minúsculas y sin acentos</p>
 
-            <form class="buttons">
+                    <input type="submit" id="encriptor" value="Encriptar">
                     
-                <p class="warning"><iconify-icon icon="ic:sharp-warning"></iconify-icon> Solo letras minúsculas y sin acentos</p>
-
-                <input  type="submit" value="Encriptar">
-                <input  type="submit" value="Desencriptar">
-                
-            </form>
+                    <input  type="submit" id="dencryptor" value="Desencriptar">
+                    
+                </div>
+            
+            </div>
                 
 
         </section>
@@ -48,6 +60,7 @@
                 <img src="./assets/Muñeco.png" alt="chica buscando en input">
                 <h3>Ningún Parrafo Fue Encontrado</h3>
                 <p>Ingresa el texto que deseas incriptar o desincriptar en la sección izquierda</p>
+                <p id="result"></p>
 
             </div>
             
@@ -63,6 +76,6 @@
             </p>
         </footer>
     </main>
-
+    <script type="text/javascript" src="./index.js"></script>
 </body>
 </html>
