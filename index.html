@@ -34,13 +34,16 @@
 
         <section class="container-sect-left">
 
-            <div class="write-space">
+            <section class="write-space">
 
                 <input type="text" id="encryptor_text" placeholder="    Ingrese el texto" required>
 
+                <div class="warning">
+
+                    <p><iconify-icon icon="ic:sharp-warning"></iconify-icon> Solo letras minúsculas y sin acentos</p>
+
+                </div>
                 <div class="buttons">
-                        
-                    <p class="warning"><iconify-icon icon="ic:sharp-warning"></iconify-icon> Solo letras minúsculas y sin acentos</p>
 
                     <input type="submit" id="encriptor" value="Encriptar">
                     <input  type="submit" id="dencryptor" value="Desencriptar">     
@@ -48,32 +51,41 @@
                 </div>
 
             
-            </div>
+            </section>
                 
 
         </section>
 
         <aside class="container-sect-right">
             
-            <div class="div-right">
+            <section class="div-right" id="show">
 
                 <img src="./assets/Muñeco.png" alt="chica buscando en input">
                 <h3>Ningún Parrafo Fue Encontrado</h3>
                 <p>Ingresa el texto que deseas incriptar o desincriptar en la sección izquierda</p>
                 <p id="result"></p>
             
-            </div>
-            
+            </section>
+
+            <section class="hidden-section" id="hidden">
+
+                <p>input a mostrar</p>
+                <input type="submit" id="copy" value="Copiar">
+
+            </section>
 
         </aside>
 
         <footer>
             <h3>Desarrollador: Juan Carlos Villar Quintero</h3>
-            <p>
+            
+            <div class="icons">
+                
                 <a href="https://github.com/JuanC0097" target="_blank"><iconify-icon icon="icon-park:github"></iconify-icon></a>
                 <a href="https://www.linkedin.com/in/juan-carlos-villar-quintero-713738224/" target="_blank"><iconify-icon icon="jam:linkedin-circle"></iconify-icon></a>
-            
-            </p>
+
+            </div>
+
         </footer>
     </main>
     <script type="text/javascript" src="./index.js"></script>
