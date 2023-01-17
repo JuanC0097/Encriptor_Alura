@@ -218,11 +218,12 @@ header h1 img {
 
 }
 
-.hidden-section p {
+.hidden-section textarea {
 
     margin-top: 8rem;
     font-size: 2rem;
     color: #1465bb;
+    border: none;
 
 }
 

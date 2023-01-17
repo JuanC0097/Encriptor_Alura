@@ -3,17 +3,22 @@ const txtEncryptor = document.getElementById("encryptor_text");
 const btnEncryptor = document.querySelector("#encriptor");
 const btnDencryptor = document.querySelector("#dencryptor");
 const presult = document.querySelector("#result");
-const accents = document.querySelector("#acents");
+const btncopy = document.querySelector("#copy");
 
 //Evento del boton encriptar 
-btnEncryptor.addEventListener("click", prinText);
+btnEncryptor.addEventListener("click", principalFunction);
+btncopy.addEventListener("click", copyToClipBoard);
 
 /* Funcion Principal:
-   - Guarda el valor del input en una variable
-   - Con el metodo toLowerCase convierte la string en minuscula
-   - Con la funcion removeAccents. Reemplazara las vocales con tilde,por vocales sin tildes
-   - Con la funcion removeSpecialChar. Extraera los caracteres especiales del string*/
-function prinText() { 
+   - Cambia el display de la seccion izquierda visible a "none".
+   - Cambia el display de la seccion izquierda oculta a "inline-flex".
+   - Guarda el valor del input en una variable.
+   - Con el metodo toLowerCase convierte la string en minuscula.
+   - Con la funcion removeAccents. Reemplazara las vocales con tilde,por vocales sin tildes.
+   - Con la funcion removeSpecialChar. Extraera los caracteres especiales del string.
+   - Con la funcion clear. limpiara el input ingresado por el usuario.
+   */
+function principalFunction() { 
 
   show();
   hidden();
@@ -22,13 +27,14 @@ function prinText() {
   removetxt = removeAccents(removetxt);
   removetxt = removeSpecialChar(removetxt);
   presult.innerText = "SU TEXTO ES: " + removetxt;
+  clear();
 
 }
 
 //Constante para probar las funciones
 const textoPrueba = "este es un texto de prueba";
 
-//Diccionario para remover acentos
+//Diccionario para reemplazar acentos
 let diccionario =
 {
   "á" : "a",
@@ -38,7 +44,7 @@ let diccionario =
   "ú" : "u"
 };
 
-//Funcion para removes acentos
+//Funcion para reemplazar acentos
 function removeAccents (frase) {
 
     remove = frase.replace(/á|é|í|ó|ú/g,function(a){
@@ -87,6 +93,23 @@ function hidden () {
 function show() {
 
   document.getElementById("show").style.display = "none";
+
+}
+
+//Funcion para obtener el texto copiado
+function copyToClipBoard(){
+
+  let content = document.querySelector("#result");
+  content.select();
+  document.execCommand("copy");
+  console.log("copiado");
+
+}
+
+//Funcion para limpiar campo del input.
+function clear(){
+
+  document.getElementById("encryptor_text").value = "";
 
 }
 
