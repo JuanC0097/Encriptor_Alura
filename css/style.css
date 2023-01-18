@@ -267,11 +267,19 @@ footer {
 
 .buttons input:hover {
 
-    transform: scale(1.2);
+    transform: scale(1.0);
     background-color: #ffffff;
     color: #1465bb;
     border: #1465bb solid 0.2rem;
     margin-right: 5rem;
+
+}
+
+#copy:hover {
+
+    background-color: #ffffff;
+    color: #000000;
+    border: #000000 solid 0.2rem;
 
 }
 

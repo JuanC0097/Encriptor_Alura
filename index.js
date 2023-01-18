@@ -5,11 +5,18 @@ const btnDencryptor = document.querySelector("#dencryptor");
 const presult = document.querySelector("#result");
 const btncopy = document.querySelector("#copy");
 
-//Evento del boton encriptar 
-btnEncryptor.addEventListener("click", principalFunction);
-btncopy.addEventListener("click", copyToClipBoard);
+/*
+  Eventos
+  -Evento del boton encriptar
+  -Evento del boton copiar
+  -Evento del boton desencriptar
+  */ 
+btnEncryptor.addEventListener("click", principalFunctionEncryptor);
+btncopy.addEventListener("click",principalFuctionCopy);
+btnDencryptor.addEventListener("click",principalFuctionDencryptor);
 
-/* Funcion Principal:
+/* 
+  Funcion Principal para el boton Encriptar:
    - Cambia el display de la seccion izquierda visible a "none".
    - Cambia el display de la seccion izquierda oculta a "inline-flex".
    - Guarda el valor del input en una variable.
@@ -18,7 +25,7 @@ btncopy.addEventListener("click", copyToClipBoard);
    - Con la funcion removeSpecialChar. Extraera los caracteres especiales del string.
    - Con la funcion clear. limpiara el input ingresado por el usuario.
    */
-function principalFunction() { 
+function principalFunctionEncryptor() { 
 
   show();
   hidden();
@@ -27,13 +34,31 @@ function principalFunction() {
   removetxt = removeAccents(removetxt);
   removetxt = removeSpecialChar(removetxt);
   removetxt = encriptor(removetxt);
-  presult.innerText = "SU TEXTO ES: " + removetxt;
+  presult.innerText = removetxt;
   clear();
 
 }
 
-//Constante para probar las funciones
-const textoPrueba = "este es un texto de prueba";
+/*Funcion principal para el boton copiar*/
+function principalFuctionCopy() {
+
+  copyToClipBoard();
+
+}
+
+/**
+  Funcion principal para el boton Desencriptar:
+
+*/
+function principalFuctionDencryptor(){
+
+  let texto = txtEncryptor.value;
+  desncriptortxt = dencriptor(texto);
+  presult.innerText = desncriptortxt;
+  clear();
+
+
+}
 
 //Diccionario para reemplazar acentos
 let diccionario =
@@ -83,6 +108,27 @@ function encriptor (frase) {
 
 }
 
+//Diccionario para desencriptar
+let dicdencriptor =
+{
+  "ai"    : "a",
+  "enter" : "e",
+  "imes"  : "i",
+  "ober"  : "o",
+  "ufat"  : "u"
+
+};
+
+//Funcion para desencriptar
+function dencriptor (frase) {
+
+  txtdencrip = frase.replace(/ai|enter|imes|ober|ufat/g,function(a){
+    return dicdencriptor[a];
+  });
+  return txtdencrip;
+
+}
+
 //Funcion para mostrar  seccion
 function hidden () {
 
@@ -103,7 +149,6 @@ function copyToClipBoard(){
   let content = document.querySelector("#result");
   content.select();
   document.execCommand("copy");
-  console.log("copiado");
 
 }
 
@@ -113,8 +158,3 @@ function clear(){
   document.getElementById("encryptor_text").value = "";
 
 }
-
-imprimir = encriptor(textoPrueba);
-console.log(imprimir);
-
-
