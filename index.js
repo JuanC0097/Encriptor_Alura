@@ -26,6 +26,7 @@ function principalFunction() {
   removetxt = texto.toLowerCase();
   removetxt = removeAccents(removetxt);
   removetxt = removeSpecialChar(removetxt);
+  removetxt = encriptor(removetxt);
   presult.innerText = "SU TEXTO ES: " + removetxt;
   clear();
 

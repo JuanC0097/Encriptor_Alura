@@ -36,13 +36,10 @@
 
             <section class="write-space">
 
-                <input type="text" id="encryptor_text" placeholder="    Ingrese el texto" required>
+                <textarea name="enter_input" id="encryptor_text" cols="15" rows="7" placeholder="Ingrese su texto"></textarea>
 
-                <div class="warning">
+                <p class="warning"><iconify-icon icon="ic:sharp-warning"></iconify-icon> Solo letras minúsculas y sin acentos</p>
 
-                    <p><iconify-icon icon="ic:sharp-warning"></iconify-icon> Solo letras minúsculas y sin acentos</p>
-
-                </div>
                 <div class="buttons">
 
                     <input type="submit" id="encriptor" value="Encriptar">
@@ -68,7 +65,7 @@
 
             <section class="hidden-section" id="hidden">
 
-                <textarea id="result"></textarea>
+                <textarea id="result"cols="15" rows="18"></textarea>
                 <input type="submit" id="copy" value="Copiar">
 
             </section>

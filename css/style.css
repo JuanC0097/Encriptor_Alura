@@ -10,7 +10,7 @@ html {
 main {
 
     display: grid;
-    margin: 2rem 2rem;
+    margin: 1rem 1rem;
     font-family: 'Inter', sans-serif;
     height: 100vh;
     grid-gap: 1rem ;
@@ -99,18 +99,17 @@ header h1 img {
 .write-space {
 
     display: flex;
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 
 }
 
-.write-space input{
+.write-space textarea {
 
     font-size: 2.5rem;
-    height: 5rem;
     border: none;
     color: #1465bb;
     background-color: #F3F5FC;
@@ -121,7 +120,6 @@ header h1 img {
 
 .warning {
 
-    display: flex;
     font-size: 1.5rem;
     color: #808080;
 
@@ -206,7 +204,7 @@ header h1 img {
 
 .hidden-section input {
 
-    padding: 1rem 1rem;
+    padding: 1rem 3rem;
     margin-bottom: 7rem ;
     margin-left: 1rem;
     font-size: 2.0rem;
@@ -220,7 +218,7 @@ header h1 img {
 
 .hidden-section textarea {
 
-    margin-top: 8rem;
+    margin-top: 5rem;
     font-size: 2rem;
     color: #1465bb;
     border: none;
@@ -277,6 +275,18 @@ footer {
 
 }
 
+#encryptor_text:focus {
+
+    outline: none;
+
+}
+
+#result:focus {
+
+    outline: none;
+
+}
+
 /*Media Queries para tablet*/
 
 @media (min-width: 750px) {
@@ -287,7 +297,7 @@ footer {
         "header header"
         "section aside"
         "footer footer";
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 49% 50%;
         grid-template-rows: 10% 80% 10%;      
 
     }
@@ -309,7 +319,7 @@ footer {
 
     .warning {
 
-        margin-top: 45rem;
+        margin-top: 5rem;
         
     
     }
@@ -339,7 +349,7 @@ footer {
         "section section aside"
         "footer footer footer";
         
-        grid-template-columns: 20% 50% 30%;
+        grid-template-columns: 19% 50% 30%;
         grid-template-rows: 10% 80% 10%;
 
     }
@@ -368,13 +378,6 @@ footer {
 
         height: 8rem;
 
-    }
-
-    .warning {
-
-        margin-top: 30rem;
-        
-    
     }
 
     ::placeholder {
