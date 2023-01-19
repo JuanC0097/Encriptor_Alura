@@ -1,7 +1,9 @@
-//constantes con los input
+/*
+Declaracion de la constantes con los elementos necesarios para el proyecto
+*/
 const txtEncryptor = document.getElementById("encryptor_text");
 const btnEncryptor = document.querySelector("#encriptor");
-const btnDencryptor = document.querySelector("#dencryptor");
+const btndencryptor = document.querySelector("#dencryptor");
 const presult = document.querySelector("#result");
 const btncopy = document.querySelector("#copy");
 
@@ -12,8 +14,9 @@ const btncopy = document.querySelector("#copy");
   -Evento del boton desencriptar
   */ 
 btnEncryptor.addEventListener("click", principalFunctionEncryptor);
-btncopy.addEventListener("click",principalFuctionCopy);
-btnDencryptor.addEventListener("click",principalFuctionDencryptor);
+btndencryptor.addEventListener("click",principalFuctionDencryptor);
+btncopy.addEventListener("click",copyToClipBoard);
+
 
 /* 
   Funcion Principal para el boton Encriptar:
@@ -23,8 +26,11 @@ btnDencryptor.addEventListener("click",principalFuctionDencryptor);
    - Con el metodo toLowerCase convierte la string en minuscula.
    - Con la funcion removeAccents. Reemplazara las vocales con tilde,por vocales sin tildes.
    - Con la funcion removeSpecialChar. Extraera los caracteres especiales del string.
+   - Con la funcion encriptor, reemplazara los valores de la string segun necesidad.
+   - Con el metodo innerText, se mostrar la encriptacion de la string en el elemento presult.
    - Con la funcion clear. limpiara el input ingresado por el usuario.
-   */
+
+  */
 function principalFunctionEncryptor() { 
 
   show();
@@ -39,28 +45,30 @@ function principalFunctionEncryptor() {
 
 }
 
-/*Funcion principal para el boton copiar*/
-function principalFuctionCopy() {
-
-  copyToClipBoard();
-
-}
-
-/**
+/*
   Funcion principal para el boton Desencriptar:
+   - Guarda el valor del input en una variable.
+   - Con la funcion dencriptor, reemplazara los valores de la string segun necesidad.
+   - Con el metodo innerText, se mostrar la encriptacion de la string en el elemento presult.
 
 */
 function principalFuctionDencryptor(){
 
+  show();
+  hidden();
   let texto = txtEncryptor.value;
   desncriptortxt = dencriptor(texto);
-  presult.innerText = desncriptortxt;
+  presult.innerHTML = desncriptortxt;
   clear();
-
+  console.log(desncriptortxt);
 
 }
 
-//Diccionario para reemplazar acentos
+/*
+  Diccionario para reemplazar acentos
+   - Como claves de utilizaran las vocales con acento.
+   - Como valor de la claves las vocales sin acento
+*/
 let diccionario =
 {
   "á" : "a",
@@ -70,7 +78,12 @@ let diccionario =
   "ú" : "u"
 };
 
-//Funcion para reemplazar acentos
+/*
+  Funcion para reemplazar acentos
+   - Con el metodo replace,las claves del diccionario y el modificador g,
+     se reemplazan valores en el string y se guarda en la variable remove
+   - Se retorna la variable remove con la nueva string sin tildes en las vocales
+*/
 function removeAccents (frase) {
 
     remove = frase.replace(/á|é|í|ó|ú/g,function(a){
@@ -80,7 +93,12 @@ function removeAccents (frase) {
 
 }
 
-//Función para remover caracteres especiales.
+/*
+  Función para remover caracteres especiales.
+   - Con el metodo replace,los caracteres especiales a remover y el modificador g,
+     se remueven de la string
+   - Se retorna la variable con la frase sin caracteres especiales
+*/
 function removeSpecialChar(frase) {
 
     text = frase.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
@@ -88,7 +106,11 @@ function removeSpecialChar(frase) {
 
 }
 
-//Diccionario para encriptar texto
+/*
+  Diccionario para reemplazar acentos
+   - Como claves de utilizaran las vocales.
+   - Como valor de la claves el string a reemplazar
+*/
 let dicencriptor =
 {
   "a" : "ai",
@@ -98,7 +120,12 @@ let dicencriptor =
   "u" : "ufat"
 };
 
-//Función para encriptar texto
+/*
+  Funcion para encriptar texto
+   - Con el metodo replace,las claves del diccionario y el modificador g,
+     se reemplazan valores en el string y se guarda en la variable txtencrip
+   - Se retorna la variable txtencrip con la nueva string encriptada
+*/
 function encriptor (frase) {
 
   txtencrip = frase.replace(/a|e|i|o|u/g,function(a){
@@ -108,7 +135,11 @@ function encriptor (frase) {
 
 }
 
-//Diccionario para desencriptar
+/*
+  Diccionario para desencriptar texto
+   - Como claves de utilizaran los valores de encriptacion.
+   - Como valor de la claves, las vocales a reemplazar
+*/
 let dicdencriptor =
 {
   "ai"    : "a",
@@ -119,7 +150,12 @@ let dicdencriptor =
 
 };
 
-//Funcion para desencriptar
+/*
+  Funcion para dencriptar texto
+   - Con el metodo replace,las claves del diccionario y el modificador g,
+     se reemplazan valores por vocales en el string y se guarda en la variable txtdencrip
+   - Se retorna la variable txtdencrip con la nueva string desencriptada
+*/
 function dencriptor (frase) {
 
   txtdencrip = frase.replace(/ai|enter|imes|ober|ufat/g,function(a){
@@ -129,21 +165,34 @@ function dencriptor (frase) {
 
 }
 
-//Funcion para mostrar  seccion
+/*
+  Funcion para mostrar seccion oculta
+   - Con el metodo  de documento getElementById,toma la seccion con id hidden.
+   - Con los metodos style y display, cambia su display a inline-flex
+*/
 function hidden () {
 
   document.getElementById("hidden").style.display = "inline-flex";
 
 }
 
-//Funcion para esconder seccion
+/*
+  Funcion para ocultar la seccion visible
+   - Con el metodo  de documento getElementById,toma la seccion con id show.
+   - Con los metodos style y display, cambia su display a none
+*/
 function show() {
 
   document.getElementById("show").style.display = "none";
 
 }
 
-//Funcion para obtener el texto copiado
+/*
+  Funcion para copiar la string encriptada
+   - Con el metodo  de documento querySelector,se obtiene el id del elemento a mostrar el texto
+   - Con el metodo select, seleccionamos el string.
+   - Con el metodo execCommand, copia el string de vuelta
+*/
 function copyToClipBoard(){
 
   let content = document.querySelector("#result");
@@ -152,7 +201,11 @@ function copyToClipBoard(){
 
 }
 
-//Funcion para limpiar campo del input.
+/*
+  Funcion para limpiar el espacio del input
+   - Con el metodo  de documento getElementById,se obtiene el id del elemento a limpiar
+    Se cambia su valor por ""
+*/
 function clear(){
 
   document.getElementById("encryptor_text").value = "";
