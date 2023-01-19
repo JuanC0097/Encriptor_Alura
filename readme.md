@@ -54,14 +54,18 @@ El proyecto cuenta con:
     Este archivo guarda toda la interacctividad del proyecto.
 
     3.1 La primera sección guarda en constantes los inputs y botones del encriptador.
-    3.2 La segunda sección es la declaración de variables que se utilizaran el el proyecto
-    3.3 La tercera sección alberga las funciónes construidas para cumplir con la logíca de la pagina, entre ellas encontramos: 
-        3.3.1 La funcion principal, la recibira el texto ingresado por el usuario y ejecurata el resto de funciones para cumplir el objetivo
-        3.3.2 La funcion para reemplazar acentos, la cual tomara el texto ingresado por el usuario y con soporte en un diccionario, reemplazara los acentos por vocales normales
-        3.3.3 La funcion para remover caracteres especiales, Utiliza el metodo replace para remover los caracteres especiales.
+    3.2 La tercera sección alberga las funciónes construidas para cumplir con la logíca de la pagina, entre ellas encontramos: 
+        3.2.1 Las funciones principales de encriptar y desencriptar, las cuales recibira el texto ingresado por el usuario y ejecutara el resto de funciones para cumplir el objetivo
+        3.2.2 La funcion para reemplazar acentos, la cual tomara el texto ingresado por el usuario y con soporte en un diccionario, reemplazara los acentos por vocales normales
+        3.2.3 La funcion para remover caracteres especiales, Utiliza el metodo replace para remover los caracteres especiales.
+        3.2.4 Las funciones de encriptar y desencriptar, las cual reemplazara los caracteres del diccionario especifico.
+        3.2.5 Las funciones de hidden y show, las cuales cambiaran el display de las secciones a necesidad.
+        3.2.6 La funcion copyToClipBoard, con la cual el usuario podra copiar el texto de la seccion escondida.
+        3.2.7 La funcion clear, para limpiar los campos del text tarea.
     3.4 La cuarta seccion alberga dos diccionarios construidos para:
             3.4.1 Reemplazar los acentos por vocales sin acentos
             3.4.2 Encriptar el texto identificando los caracteres y reemplazandolos por la llave especificada.
+            3.4.2 Desencriptar el texto identificando los caracteres y reemplazandolos por la llave especificada.
     
 ***
 
@@ -74,7 +78,7 @@ Este challenger fue traido por:
 
 Desarrollado por: 
 
-**Juan Carlos Villar Quintero** *Estudiante de Oracle Next Education*
+**Juan Carlos Villar Quintero**: *Estudiante de Oracle Next Education*
 
 
 
